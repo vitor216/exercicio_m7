@@ -1,9 +1,9 @@
 const form = document.getElementById('form-exercicio');
 
-function validNumero (numero1,numero2){
+function validaNumero(maiorNumero){
     if(numero2 > numero1){
-        const maiornumero = numero2;
-        return maiornumero;
+        const maiorNumero1 = numero2;    
+    return maiorNumero1;
     }
 }
 
@@ -11,23 +11,21 @@ form.addEventListener('submit', function(e){
     var formEvalido = false;
     e.preventDefault();
 
-    const primeironumero = document.getElementById('numero1');
-    const segundonumero = document.getElementById('numero2');
-    const mensagemsucesso = 'Os numeros: ' + primeironumero.value+ 'e ' +segundonumero.value+ ' foram gravados com sucesso';
-    const mensagemerror ='O valor do 2º Numero deve ser maior que o do 1º';
-
-    formEvalido = validNumero (segundonumero.value);
+    const primeiroNumero = document.getElementById('numero1');
+    const segundoNumero = document.getElementById('numero2');
+    const mensagemSucesso = ('Os valores ' + primeiroNumero.value + ' e ' + segundoNumero.value + ' foram Salvos');
+    const mensagemerror = ('O segundo numero tem que ser maior que o primeiro');
+    
+    formEvalido = validaNumero(segundoNumero.value)
     if(formEvalido){
         const containermensagemsucesso = document.querySelector('.sucess-mensage');
-        containermensagemsucesso.innerHTML = mensagemsucesso;
-        containermensagemsucesso.style.display='block';
-
-        primeironumero.value='';
-        segundonumero.value='';
-
+        containermensagemsucesso.innerHTML = mensagemSucesso;
+        containermensagemsucesso.style.display='block'
+        
+        primeiroNumero.value = '';
+        segundoNumero.value = '';
     }else{
         const containermensagemerror = document.querySelector('.error-mensage');
         containermensagemerror.innerHTML = mensagemerror;
-        containermensagemerror.style.display='block';
-    }
-})
+        containermensagemerror.style.display='block'
+    }})
