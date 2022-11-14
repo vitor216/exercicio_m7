@@ -6,6 +6,9 @@ function removeelement(element){
     },2000);
     }
 
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+
     const primeiroNumero = document.getElementById('numero1');
     const segundoNumero = document.getElementById('numero2');
     const mensagemSucesso = ('Os valores ' + primeiroNumero.value + ' e ' + segundoNumero.value + ' foram Salvos');
@@ -24,4 +27,4 @@ function removeelement(element){
         containermensagemerror.innerHTML = mensagemerror;
         containermensagemerror.style.display='block'
         removeelement(containermensagemerror);
-    }
+    }})
