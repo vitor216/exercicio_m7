@@ -1,5 +1,11 @@
 const form = document.getElementById('form-exercicio');
 
+function removeelement(element){
+    setTimeout (function(){
+        element.remove();
+    },2000);
+    }
+
 form.addEventListener('submit', function(e){
     var formEvalido = false;
     e.preventDefault();
@@ -13,6 +19,7 @@ form.addEventListener('submit', function(e){
         const containermensagemsucesso = document.querySelector('.sucess-mensage');
         containermensagemsucesso.innerHTML = mensagemSucesso;
         containermensagemsucesso.style.display='block'
+        removeelement(containermensagemsucesso);
         
         primeiroNumero.value = '';
         segundoNumero.value = '';
@@ -20,4 +27,5 @@ form.addEventListener('submit', function(e){
         const containermensagemerror = document.querySelector('.error-mensage');
         containermensagemerror.innerHTML = mensagemerror;
         containermensagemerror.style.display='block'
+        removeelement(containermensagemerror);
     }})
