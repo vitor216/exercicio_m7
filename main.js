@@ -1,12 +1,5 @@
 const form = document.getElementById('form-exercicio');
 
-function validaNumero(numero1,numero2){
-    if(numero2 > numero1){
-        const maiorNumero = numero2;    
-    return maiorNumero;
-    }
-}
-
 form.addEventListener('submit', function(e){
     var formEvalido = false;
     e.preventDefault();
@@ -16,8 +9,7 @@ form.addEventListener('submit', function(e){
     const mensagemSucesso = ('Os valores ' + primeiroNumero.value + ' e ' + segundoNumero.value + ' foram Salvos');
     const mensagemerror = ('O segundo numero tem que ser maior que o primeiro');
     
-    formEvalido = validaNumero(segundoNumero.value)
-    if(formEvalido){
+    if(primeiroNumero.value < segundoNumero.value){
         const containermensagemsucesso = document.querySelector('.sucess-mensage');
         containermensagemsucesso.innerHTML = mensagemSucesso;
         containermensagemsucesso.style.display='block'
