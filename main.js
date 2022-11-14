@@ -1,9 +1,9 @@
 const form = document.getElementById('form-exercicio');
 
-function validaNumero(maiorNumero){
+function validaNumero(numero1,numero2){
     if(numero2 > numero1){
-        const maiorNumero1 = numero2;    
-    return maiorNumero1;
+        const maiorNumero = numero2;    
+    return maiorNumero;
     }
 }
 
