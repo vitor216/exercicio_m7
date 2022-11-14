@@ -14,7 +14,7 @@ form.addEventListener('submit', function(e){
     const segundoNumero = document.getElementById('numero2');
     const mensagemSucesso = ('Os valores ' + primeiroNumero.value + ' e ' + segundoNumero.value + ' foram Salvos');
     const mensagemerror = ('O segundo numero tem que ser maior que o primeiro');
-    formEvalido = true;
+    if (formEvalido){
     if(primeiroNumero.value < segundoNumero.value){
         const containermensagemsucesso = document.querySelector('.sucess-mensage');
         containermensagemsucesso.innerHTML = mensagemSucesso;
@@ -28,4 +28,4 @@ form.addEventListener('submit', function(e){
         containermensagemerror.innerHTML = mensagemerror;
         containermensagemerror.style.display='block'
         removeelement(containermensagemerror);
-    }})
+    }}})
