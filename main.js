@@ -21,6 +21,8 @@ form.addEventListener('submit', function(e){
         primeiroNumero.value = '';
         segundoNumero.value = '';
 
+    }else if(segundoNumero.value >= primeiroNumero.value){
+        alert(mensagemerror)
     }else{
         alert(mensagemerror)
     }})
