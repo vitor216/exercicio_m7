@@ -7,7 +7,7 @@ function removeelement(element){
     }
 
 form.addEventListener('submit', function(e){
-    var formEvalido = false;
+    var formEvalido = true;
     e.preventDefault();
 
     const primeiroNumero = document.getElementById('numero1');
