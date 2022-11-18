@@ -7,20 +7,20 @@ function removeelement(element){
     }
 
 form.addEventListener('submit', function(e){
-    var formEvalido = true;
+    var formEvalido = false;
     e.preventDefault();
 
-    const primeiroNumero = parseFloat(document.getElementById('numero1').value);
-    const segundoNumero = parseFloat(document.getElementById('numero2').value);
-    const mensagemSucesso = ('Os valores ' + primeiroNumero.value + ' e ' + segundoNumero.value + ' foram Salvos');
+    const primeiroNumero = parseInt(document.getElementById('numero1').value);
+    const segundoNumero = parseInt(document.getElementById('numero2').value);
+    const mensagemSucesso = ('Os valores ' + primeiroNumero + ' e ' + segundoNumero + ' foram Salvos');
     const mensagemerror = ('O segundo numero tem que ser maior que o primeiro');
 
-    if(primeiroNumero.value < segundoNumero.value){
-        alert(mensagemSucesso)
+    if(primeiroNumero < segundoNumero){
+        alert(mensagemSucesso);
 
-        primeiroNumero.value = '';
-        segundoNumero.value = '';
+        numero1.value = '';
+        numero2.value = '';
 
     }else{
-        alert(mensagemerror)
+        alert(mensagemerror);
     }})
