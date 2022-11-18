@@ -10,8 +10,8 @@ form.addEventListener('submit', function(e){
     var formEvalido = true;
     e.preventDefault();
 
-    const primeiroNumero = document.getElementById('numero1');
-    const segundoNumero = document.getElementById('numero2');
+    const primeiroNumero = parseFloat(document.getElementById('numero1'));
+    const segundoNumero = parseFloat(document.getElementById('numero2'));
     const mensagemSucesso = ('Os valores ' + primeiroNumero.value + ' e ' + segundoNumero.value + ' foram Salvos');
     const mensagemerror = ('O segundo numero tem que ser maior que o primeiro');
 
